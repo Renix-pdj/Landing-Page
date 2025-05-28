@@ -1,0 +1,150 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #f5f7fa;
+  color: #222;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 60px; /* espacio para footer fijo */
+}
+
+/* Header fijo arriba */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #0077cc;
+  color: white;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* Main con padding para que no quede oculto tras header */
+main {
+  position: relative;
+  max-width: 1200px;
+  margin: 80px auto 0 auto;
+  padding: 20px;
+}
+
+/* Contenido principal */
+.content {
+  position: relative;
+  width: 65%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  float: left;
+  margin-right: 5%;
+}
+
+/* Sidebar posicionado a la derecha */
+.sidebar {
+  position: relative;
+  width: 25%;
+  background-color: #e0e6f0;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  float: left;
+  height: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Clear floats */
+main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Sección features centrada y con espacio */
+.features {
+  position: relative;
+  max-width: 1200px;
+  margin: 40px auto 40px auto;
+  padding: 0 20px;
+}
+
+/* Cada feature con margen inferior */
+.feature {
+  position: relative;
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 20px 20px 20px 60px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  /* para que los iconos y botones se posicionen */
+}
+
+/* Icono en feature - posición absoluta */
+.feature span {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+}
+
+/* Botón a la derecha */
+.feature button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #0077cc;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Botón de content centrado sin flex */
+.content button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #0077cc;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  width: max-content;
+  display: block;
+}
+
+/* Footer fijo abajo */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #0077cc;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+}
